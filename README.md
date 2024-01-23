@@ -42,7 +42,9 @@ public class test {
 
 }
 ```
+```
 ALTER USER 'username'@'%' IDENTIFIED WITH 'mysql_native_password' BY 'Dkfvk!@234';
 FLUSH PRIVILEGES;
 GRANT ALL PRIVILEGES ON mysql.* TO 'user2'@'%';
 FLUSH PRIVILEGES;
+```

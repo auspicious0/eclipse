@@ -44,8 +44,8 @@ public class test {
 ```
 사용자 생성
 ```
-GRANT ALL PRIVILEGES ON *.* TO '새로운사용자이름'@'%' WITH GRANT OPTION;
-FLUSH PRIVILEGES;
+CREATE USER '새로운사용자이름'@'%' IDENTIFIED BY '새로운비밀번호';
+
 ```
 모든 권한 부여
 ```

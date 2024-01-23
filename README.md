@@ -8,7 +8,7 @@ import java.sql.*;
 public class test {
 
 	static final String JDBC_DRIVER = "com.mysql.cj.jdbc.Driver";
-	static final String DB_URL = "jdbc:mysql://192.168.1.93/mysql?useSSL=false&allowPublicKeyRetrieval=true";
+	static final String DB_URL = "jdbc:mysql://192.168.1.93/mysql?useSSL=false";
 	static final String USERNAME = "user2";
 	static final String PASSWORD = "Dkfvk!@234";
 	public static void main(String[] args) throws SQLException {

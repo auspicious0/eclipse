@@ -9,13 +9,14 @@ import java.sql.*;
 public class test {
 
 	static final String JDBC_DRIVER = "com.mysql.cj.jdbc.Driver";
-	static final String DB_URL = "jdbc:mysql://192.168.1.93/mysql?useSSL=false";
-	static final String USERNAME = "user2";
+	static final String DB_URL = "jdbc:mysql://..../mysql?useSSL=false";
+	static final String USERNAME = "user3";
 	static final String PASSWORD = "Dkfvk!@234";
-	public static void main(String[] args) throws SQLException {
+	public static String getEncryptedValue() {
 		Connection conn = null;
 		Statement stmt = null;
 		ResultSet rs = null;
+		String encryptedValue = null;
 		
 		try {
 			Class.forName(JDBC_DRIVER);
@@ -24,8 +25,8 @@ public class test {
 			String sql1 = "select xdb_enc('normal', '123123123123') from dual;";
 			rs = stmt.executeQuery(sql1);
 			rs.next();
-			String sql = rs.getString(1);
-			System.out.print("enc= " + sql);
+			encryptedValue = rs.getString(1);
+			System.out.print("enc= " + encryptedValue);
 		}catch(SQLException se1) {
 			se1.printStackTrace();
 		}catch(Exception ex) {
@@ -39,9 +40,17 @@ public class test {
                 se2.printStackTrace();
             }
 		}
+		return encryptedValue;
+
+	}
+	
+	public static void main(String[] args) {
+		getEncryptedValue();
 	}
 
 }
+
+
 ```
 사용자 생성
 ```

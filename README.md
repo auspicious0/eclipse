@@ -55,3 +55,13 @@ FLUSH PRIVILEGES;
 GRANT ALL PRIVILEGES ON mysql.* TO 'user2'@'%';
 FLUSH PRIVILEGES;
 ```
+톰캣 연동 코드
+```
+<%@ page import="test.test" %>
+
+<% String encryptedValue = test.getEncryptedValue(); %>
+
+<% request.setAttribute("encryptedValue", encryptedValue); %>
+
+<p>Encrypted Value: <%= encryptedValue %></p>
+```

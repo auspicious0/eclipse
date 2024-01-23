@@ -42,6 +42,12 @@ public class test {
 
 }
 ```
+사용자 생성
+```
+GRANT ALL PRIVILEGES ON *.* TO '새로운사용자이름'@'%' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
+```
+모든 권한 부여
 ```
 ALTER USER 'username'@'%' IDENTIFIED WITH 'mysql_native_password' BY 'Dkfvk!@234';
 FLUSH PRIVILEGES;

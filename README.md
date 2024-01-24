@@ -10,8 +10,8 @@ public class test {
 
 	static final String JDBC_DRIVER = "com.mysql.cj.jdbc.Driver";
 	static final String DB_URL = "jdbc:mysql://..../mysql?useSSL=false";
-	static final String USERNAME = "user3";
-	static final String PASSWORD = "Dkfvk!@234";
+	static final String USERNAME = "user";
+	static final String PASSWORD = "1234";
 	public static String getEncryptedValue() {
 		Connection conn = null;
 		Statement stmt = null;
@@ -61,12 +61,12 @@ CREATE USER '새로운사용자이름'@'%' IDENTIFIED BY '새로운비밀번호'
 ```
 ALTER USER 'username'@'%' IDENTIFIED WITH 'mysql_native_password' BY 'Dkfvk!@234';
 FLUSH PRIVILEGES;
-GRANT ALL PRIVILEGES ON mysql.* TO 'user2'@'%';
+GRANT ALL PRIVILEGES ON mysql.* TO 'user'@'%';
 FLUSH PRIVILEGES;
 ```
 톰캣 연동 코드
 ```
-<%@ page import="test.test" %>
+<%@ page import="패키지.클래스명" %>
 
 <% String encryptedValue = test.getEncryptedValue(); %>
 

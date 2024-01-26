@@ -22,7 +22,7 @@ public class test {
 			Class.forName(JDBC_DRIVER);
 			conn = DriverManager.getConnection(DB_URL, USERNAME, PASSWORD);
 			stmt = conn.createStatement();
-			String sql1 = "select xdb_enc('normal', '123123123123') from dual;";
+			String sql1 = " from dual;";
 			rs = stmt.executeQuery(sql1);
 			rs.next();
 			encryptedValue = rs.getString(1);

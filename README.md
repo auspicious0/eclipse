@@ -59,7 +59,7 @@ CREATE USER '새로운사용자이름'@'%' IDENTIFIED BY '새로운비밀번호'
 ```
 모든 권한 부여
 ```
-ALTER USER 'username'@'%' IDENTIFIED WITH 'mysql_native_password' BY 'Dkfvk!@234';
+ALTER USER 'username'@'%' IDENTIFIED WITH 'mysql_native_password' BY 'password';
 FLUSH PRIVILEGES;
 GRANT ALL PRIVILEGES ON mysql.* TO 'user'@'%';
 FLUSH PRIVILEGES;
